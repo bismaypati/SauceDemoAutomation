@@ -101,13 +101,3 @@ Bismay Pati
 GitHub
 
 View Source Code
-
-
-### After pasting
-
-1. Press **Ctrl + S**
-2. Don't commit yet.
-3. In Command Prompt run:
-
-```bash
-dir README.md
