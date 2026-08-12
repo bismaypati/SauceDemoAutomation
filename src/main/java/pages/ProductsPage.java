@@ -8,6 +8,7 @@ import base.BasePage;
 public class ProductsPage extends BasePage {
 
 	private By productsTitle = By.xpath("//span[text()='Products']");
+	private By cartIcon = By.className("shopping_cart_link");
 
 	public ProductsPage(WebDriver driver) {
 		super(driver);
@@ -15,5 +16,18 @@ public class ProductsPage extends BasePage {
 
 	public String getProductsTitle() {
 		return waitUtil.waitForElementVisible(productsTitle).getText();
+	}
+
+	public void addProductToCart(String productName) {
+
+		By addToCartButton = By
+				.xpath("//div[text()='" + productName + "']/ancestor::div[@class='inventory_item']//button");
+
+		click(addToCartButton);
+	}
+
+	public CartPage clickCart() {
+		click(cartIcon);
+		return new CartPage(driver);
 	}
 }
