@@ -29,4 +29,8 @@ public class BasePage {
 	public String getText(By locator) {
 		return waitUtil.waitForElementVisible(locator).getText();
 	}
+	
+	public boolean isDisplayed(By locator) {
+		return waitUtil.waitForElementVisible(locator).isDisplayed();
+	}
 }

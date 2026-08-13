@@ -20,7 +20,7 @@ public class CartPage extends BasePage {
 
 	public boolean isProductDisplayed(String productName) {
 		By product = By.xpath("//div[text()='" + productName + "']");
-		return waitUtil.waitForElementVisible(product).isDisplayed();
+		return isDisplayed(product);
 	}
 
 	public void removeProduct(String productName) {
