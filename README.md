@@ -101,3 +101,5 @@ Bismay Pati
 GitHub
 
 View Source Code
+
+Jenkins CI integration enabled.
