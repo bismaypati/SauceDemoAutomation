@@ -15,7 +15,7 @@ public class ProductsPage extends BasePage {
 	}
 
 	public String getProductsTitle() {
-		return waitUtil.waitForElementVisible(productsTitle).getText();
+		return getText(productsTitle);
 	}
 
 	public void addProductToCart(String productName) {
